@@ -1,1 +1,3 @@
-# sergeosn.github.io
+# Description
+
+JSSchool home tasks

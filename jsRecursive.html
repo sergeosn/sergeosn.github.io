@@ -1,0 +1,55 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Home work JSShcool - Recursive</title>
+    <script>
+        function getWord() {
+            const PALINDROME = prompt("Please enter your name", "Harry Potter");
+
+            if (PALINDROME === '') {
+                alert('You must enter the word');
+                return getWord();
+            }
+
+            return PALINDROME;
+        }
+
+        function isPalindrome(word = '') {
+            const YES = 'Palindrome';
+            const NO = 'Not Palindrome';
+
+            if (word == null) {
+                return NO;
+            }
+
+            const WORD_LENGTH = word.length;
+
+            if (WORD_LENGTH === 1) {
+                return YES;
+            }
+
+            const FIRST_LETTER = word.substring(0, 1);
+            const LAST_LETTER = word.substring(WORD_LENGTH - 1, WORD_LENGTH);
+
+            if (FIRST_LETTER === LAST_LETTER) {
+                if (WORD_LENGTH === 2) {
+                    return YES;
+                }
+
+                return isPalindrome(word.substring(1, WORD_LENGTH - 1));
+            }
+
+            return NO;
+        }
+
+        const RESULT = word => isPalindrome(word);
+        alert(RESULT(getWord()));
+    </script>
+</head>
+<body>
+</body>
+</html>
