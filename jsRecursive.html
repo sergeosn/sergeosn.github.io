@@ -33,7 +33,7 @@
             }
 
             const FIRST_LETTER = word.substring(0, 1);
-            const LAST_LETTER = word.substring(WORD_LENGTH - 1, WORD_LENGTH);
+            const LAST_LETTER = word.slice(-1);
 
             if (FIRST_LETTER === LAST_LETTER) {
                 if (WORD_LENGTH === 2) {
