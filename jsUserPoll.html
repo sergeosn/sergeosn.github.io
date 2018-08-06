@@ -1,0 +1,40 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Home work JSShcool - Recursive</title>
+</head>
+<body>
+    <h1 id="fio"></h1>
+    <br>
+    <h3 id="birthday">Дата рождения: </h3>
+    <br>
+    <h3 id="city">Место жительства: </h3>
+
+    <script>
+        function getRequest(parameter) {
+            const request = prompt("Please enter " + parameter);
+
+            if (request === '') {
+                alert('You must enter the ' + parameter);
+                return getRequest();
+            }
+
+            return request;
+        }
+
+        const FIO = 'FIO';
+        const BIRTHDAY = 'Birthday';
+        const CITY = 'City';
+
+        const RESULT = param => getRequest(param);
+
+        document.getElementById('fio').innerHTML = RESULT(FIO);
+        document.getElementById('birthday').innerHTML += RESULT(BIRTHDAY);
+        document.getElementById('city').innerHTML += RESULT(CITY);
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Home work JSShcool - HTML/CSS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: cursive;
+            font-size: large;
+
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer */
+            -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+            -webkit-user-select: none; /* Chrome, Safari, and Opera */
+            -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+        }
+        .parent {
+            color: darkcyan;
+            clear:both;
+            float: left;
+            padding: 5px;
+        }
+        .parent div {
+            display: block;
+        }
+        .child {
+            color: darkcyan;
+            padding: 5px 20px 5px 30px;
+        }
+        .active {
+            color: #555;
+        }
+        .title {
+            cursor: pointer;
+        }
+        .open {
+            max-height: 500px;
+            transition: max-height 0.15s ease-in;
+        }
+        .closed {
+            max-height: 0;
+            transition: max-height 0.15s ease-out;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="parent">
+            <div class="title glyphicon glyphicon-folder-open"> asterai</div>
+            <div class="open">
+                <div class="child">
+                    <div class="title glyphicon glyphicon-folder-open"> asterai.com</div>
+                    <div class="open">
+                        <div class="child">
+                            <div class="title glyphicon glyphicon-folder-open"> asterai.com</div>
+                        </div>
+                        <div class="child">
+                            <div class="title glyphicon glyphicon-folder-open"> asterai.com-design</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="child">
+                    <div class="title glyphicon glyphicon-folder-open"> asterai.com-design</div>
+                </div>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="title glyphicon glyphicon-folder-open"> bot_developer</div>
+            <div class="closed">
+                <div class="child">
+                    <div class="title glyphicon glyphicon-folder-open"> bot_developer.com</div>
+                </div>
+                <div class="child">
+                    <div class="title glyphicon glyphicon-folder-open"> bot_developer.com-design</div>
+                </div>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="title glyphicon glyphicon-folder-open"> ghostpdl</div>
+            <div class="closed">
+                <div class="child">
+                    <div class="title glyphicon glyphicon-folder-open"> ghostpdl.com</div>
+                </div>
+                <div class="child">
+                    <div class="title glyphicon glyphicon-folder-open"> ghostpdl.com-design</div>
+                </div>
+            </div>
+        </div>
+        <div class="parent"><div class="title glyphicon glyphicon-folder-open"> js_school</div></div>
+        <div class="parent"><div class="title glyphicon glyphicon-folder-open"> learn</div></div>
+        <div class="parent"><div class="title glyphicon glyphicon-folder-open"> ml</div></div>
+        <div class="parent"><div class="title glyphicon glyphicon-folder-open"> opensource</div></div>
+        <div class="parent"><div class="title glyphicon glyphicon-folder-open"> test</div></div>
+        <div class="parent"><div class="title glyphicon glyphicon-folder-open"> tests</div></div>
+        <div class="parent"><div class="title glyphicon glyphicon-folder-open"> trueedit</div></div>
+    </div>
+
+    <script>
+        let button = document.getElementsByClassName("title");
+
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener("click", function(e) {
+                this.classList.toggle("active");
+
+                if (e.shiftKey) {
+                    return;
+                }
+
+                let content = this.nextElementSibling;
+
+                if (content.classList.contains("closed")) {
+                    content.classList.remove("closed");
+                    content.classList.add("open");
+                } else {
+                    content.classList.remove("open");
+                    content.classList.add("closed");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -19,31 +19,60 @@
             float: left;
             padding: 5px;
         }
-        .parent span {
-            color: black;
+        .parent div {
+            display: block;
         }
         .child {
             color: darkcyan;
             padding: 5px 20px 5px 30px;
         }
+        .title {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <div class="main">
-        <div class="parent glyphicon glyphicon-folder-open">
-            <span> asterai</span>
-            <div class="child glyphicon-folder-open"><span> asterai.com</span></div>
-            <div class="child glyphicon-folder-open"><span> asterai.com-design</span></div>
+<div class="main">
+    <div class="parent">
+        <div class="title glyphicon glyphicon-folder-open"> asterai</div>
+        <div>
+            <div class="child">
+                <div class="title glyphicon glyphicon-folder-open"> asterai.com</div>
+                <div>
+                    <div class="child">
+                        <div class="title glyphicon glyphicon-folder-open"> asterai.com</div>
+                    </div>
+                    <div class="child">
+                        <div class="title glyphicon glyphicon-folder-open"> asterai.com-design</div>
+                    </div>
+                </div>
+            </div>
+            <div class="child">
+                <div class="title glyphicon glyphicon-folder-open"> asterai.com-design</div>
+            </div>
         </div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> bot_developer</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> ghostpdl</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> js_school</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> learn</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> ml</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> opensource</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> test</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> tests</span></div>
-        <div class="parent glyphicon glyphicon-folder-open"><span> trueedit</span></div>
     </div>
+    <div class="parent">
+        <div class="title glyphicon glyphicon-folder-open"> bot_developer</div>
+        <div>
+            <div class="child glyphicon glyphicon-folder-open"> bot_developer.com</div>
+            <div class="child glyphicon glyphicon-folder-open"> bot_developer.com-design</div>
+        </div>
+    </div>
+    <div class="parent">
+        <div class="title glyphicon glyphicon-folder-open"> ghostpdl</div>
+        <div>
+            <div class="child glyphicon glyphicon-folder-open"> ghostpdl.com</div>
+            <div class="child glyphicon glyphicon-folder-open"> ghostpdl.com-design</div>
+        </div>
+    </div>
+    <div class="parent"><div class="title glyphicon glyphicon-folder-open"> js_school</div></div>
+    <div class="parent"><div class="title glyphicon glyphicon-folder-open"> learn</div></div>
+    <div class="parent"><div class="title glyphicon glyphicon-folder-open"> ml</div></div>
+    <div class="parent"><div class="title glyphicon glyphicon-folder-open"> opensource</div></div>
+    <div class="parent"><div class="title glyphicon glyphicon-folder-open"> test</div></div>
+    <div class="parent"><div class="title glyphicon glyphicon-folder-open"> tests</div></div>
+    <div class="parent"><div class="title glyphicon glyphicon-folder-open"> trueedit</div></div>
+</div>
 </body>
 </html>
