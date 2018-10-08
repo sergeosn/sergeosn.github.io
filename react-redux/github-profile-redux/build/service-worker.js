@@ -1,5 +1,5 @@
 "use strict";
-var precacheConfig = [["../build/index.html", "3074cfa65c62528db2a93ca44df963e2"], ["../build/static/css/main.e59f8f7b.css", "c4ff103c160375e296f92bc8ff533b08"], ["../build/static/js/main.8cec42db.js", "d09ac844a6aa2559b341ea991c6b363d"]],
+var precacheConfig = [["/react-redux/github-profile-redux/build/index.html", "3074cfa65c62528db2a93ca44df963e2"], ["/react-redux/github-profile-redux/build/static/css/main.e59f8f7b.css", "c4ff103c160375e296f92bc8ff533b08"], ["/react-redux/github-profile-redux/build/static/js/main.8cec42db.js", "d09ac844a6aa2559b341ea991c6b363d"]],
     cacheName = "sw-precache-v3-sw-precache-webpack-plugin-" + (self.registration ? self.registration.scope : ""),
     ignoreUrlParametersMatching = [/^utm_/], addDirectoryIndex = function(e, t) {
         var n = new URL(e);
